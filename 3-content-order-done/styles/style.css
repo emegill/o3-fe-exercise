@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    max-width: 1200px;
+    text-align: left;
+    margin: 0 auto !important;
+}
+
+@media all and (min-width: 768px) {
+    .header,
+    .navigation,
+    .content,
+    .sidebar,
+    .footer {
+        padding: 30px;
+    }
+    .flexBox {
+        display: flex;
+    }
+    .header {
+        background: green;
+    }
+    .navigation {
+        background: orange;
+        width: 25%;
+        order: 1;
+    }
+    .content {
+        background: teal;
+        width: 75%;
+        order: 2;
+    }
+    .sidebar {
+        background: pink;
+        width: 200px;
+        order: 3;
+    }
+    .footer {
+        background: yellow;
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .header,
+    .navigation,
+    .content,
+    .sidebar,
+    .footer {
+        padding: 30px;
+    }
+    .header {
+        background: green;
+    }
+    .navigation {
+        background: orange;
+    }
+    .content {
+        background: teal;
+    }
+    .sidebar {
+        background: pink;
+    }
+    .footer {
+        background: yellow;
+        width: 100%;
+    }
+}
+
+/*
+My approach to this problem was to use media queries and a flex box. I first set up a media query for any screens larger than 768px and set up a flex box to hold the content nav and sidebar. I set the new widths within the media query, then set the flex box order so I could re-order the site content within the flex box. Then once all that was set I set a max width on the body with a margin 0 auto to center it once the screen reach 1200 + .*/
